@@ -10,5 +10,7 @@ URL loading system支持的协议：
 * Local file URLs \(file:///\)
 * Data URLs \(data://\)
 
+> Apple平台上网络安全的特性叫App Transport Security \(ATS\)，默认开启
+
 
 
