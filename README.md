@@ -27,8 +27,8 @@ Fetching Content as Data \(In Memory\)
 
 无论采取哪种方式，都可以通过两种方式获得返回数据
 
-* completion block
-* delegate
+* completion block：结束后一次调用
+* delegate：累加
 
 #### Helper Classes
 
