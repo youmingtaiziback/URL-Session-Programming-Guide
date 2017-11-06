@@ -16,6 +16,8 @@ URL loading system支持的协议：
 
 URL loading system的辅助类可以分为五种：协议支持、认证和证书、cookie存储、配置管理、缓存管理
 
+![](/assets/import.png)
+
 ## How to Use This Document
 
 
