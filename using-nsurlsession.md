@@ -49,6 +49,12 @@ Life Cycle of a URL Session
 
 ## Sample Delegate Class Interface
 
+* NSURLSessionDelegate
+  * NSURLSessionTaskDelegate
+    * NSURLSessionDataDelegate
+    * NSURLSessionDownloadDelegate
+    * NSURLSessionStreamDelegate
+
 ## Creating and Configuring a Session
 
 ## Fetching Resources Using System-Provided Delegates
