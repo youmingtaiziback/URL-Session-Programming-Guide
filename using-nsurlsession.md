@@ -78,17 +78,17 @@ NSURLSession API提供了一系列配置选项
 
 除了background configuration，其他两种configuration可以重复使用，因为session对configuration是深拷贝
 
+## Fetching Resources Using System-Provided Delegates
+
 ```
 NSURLSession *sessionWithoutADelegate = [NSURLSession sessionWithConfiguration:defaultConfiguration];
 NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
- 
+
 [[sessionWithoutADelegate dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-    NSLog(@"Got response %@ with error %@.\n", response, error);
-    NSLog(@"DATA:\n%@\nEND DATA\n", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+NSLog(@"Got response %@ with error %@.\n", response, error);
+NSLog(@"DATA:\n%@\nEND DATA\n", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }] resume];
 ```
-
-## Fetching Resources Using System-Provided Delegates
 
 ## Fetching Data Using a Custom Delegate
 
