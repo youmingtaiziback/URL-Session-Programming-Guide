@@ -34,6 +34,10 @@ iOS中，如果后台传输完成或者需要证书，而此时app没有运行�
 
 app挂起时，如果有任务完成，代理的URLSession:downloadTask:didFinishDownloadingToURL:会被调用，task和下载的file的URL会传进来
 
+app挂起时，如果需要证书，session会调用代理的URLSession:task:didReceiveChallenge:completionHandler: 或者URLSession:didReceiveChallenge:completionHandler: 
+
+后台的上传或者下载会在网络失败后自动重试
+
 #### Life Cycle and Delegate Interaction
 
 #### NSCopying Behavior
