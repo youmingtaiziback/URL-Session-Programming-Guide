@@ -30,6 +30,8 @@ Fetching Content as Data \(In Memory\)
 * completion block：结束后一次调用
 * delegate：累加
 
+有NSURLSession触发的下载不会被缓存，如果需要只能手动实现
+
 #### Helper Classes
 
 #### Redirection and Other Request Changes
