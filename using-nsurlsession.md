@@ -4,6 +4,11 @@
 
 #### Types of Sessions
 
+NSURLSession的类型由创建它的configuration对象的类型决定
+
+* Default sessions：持久的基于磁盘的缓存，证书存放在keychain
+* Ephemeral sessions：不在磁盘存储任何数据
+
 #### Types of Tasks
 
 #### Background Transfer Considerations
