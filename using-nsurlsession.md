@@ -16,6 +16,7 @@ NSURLSession内部支持三种task：
 
 * Data tasks：通过NSData接收数据，返回的数据可以分批也可以通过completion handler
 * Download tasks：接收文件形式的数据，app没有运行时支持后台下载
+* Upload tasks：上传文件形式的数据，app没有运行时支持后台上传
 
 #### Background Transfer Considerations
 
