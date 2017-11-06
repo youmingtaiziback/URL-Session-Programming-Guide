@@ -28,7 +28,7 @@ NSURLSession内部支持三种task：
 * 上传仅支持从文件上传（app退出时，从data或者stream的上传会失败）
 * 如果后台转发是app在后台时启动的，configuration对象的discretionary属性视为YES
 
-iOS中，如果后台传输完成或者需要证书，而此时app没有运行，系统启动app并调用UIApplicationDelegate的application:handleEventsForBackgroundURLSession:completionHandler:
+iOS中，如果后台传输完成或者需要证书，而此时app没有运行，系统启动app并调用UIApplicationDelegate的application:handleEventsForBackgroundURLSession:completionHandler:。该方法回传进来session的identifier，app应该用此identifier创建一个session并保存completion handler。当session结束后，会调用session的delegate的URLSessionDidFinishEventsForBackgroundURLSession:方法。在该方法中调用回调，系统就知道再次挂起app是安全的
 
 #### Life Cycle and Delegate Interaction
 
