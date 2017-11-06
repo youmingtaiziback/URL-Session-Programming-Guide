@@ -30,6 +30,8 @@ NSURLSession内部支持三种task：
 
 iOS中，如果后台传输完成或者需要证书，而此时app没有运行，系统启动app并调用UIApplicationDelegate的application:handleEventsForBackgroundURLSession:completionHandler:。该方法回传进来session的identifier，app应该用此identifier创建一个session并保存completion handler。当session结束后，会调用session的delegate的URLSessionDidFinishEventsForBackgroundURLSession:方法。在该方法中调用回调，系统就知道再次挂起app是安全的
 
+> 多个identifier时，必须为每一个identifier创建一个session
+
 #### Life Cycle and Delegate Interaction
 
 #### NSCopying Behavior
