@@ -38,7 +38,7 @@ Fetching Content as Data \(In Memory\)
 
 * NSURLRequest：使用NSMutableURLRequest下载时，系统会对request进行深拷贝
 * NSURLResponse：包括
-  * 元数据：MIME type、数据长度、编码、URL
+  * 元数据：MIME类型、数据长度、编码、URL
   * 数据本身
 
 #### Redirection and Other Request Changes
