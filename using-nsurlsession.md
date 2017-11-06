@@ -20,6 +20,14 @@ NSURLSession内部支持三种task：
 
 #### Background Transfer Considerations
 
+后台下载是在另外的进程执行，所以有一些限制：
+
+* session必须提供一个代理
+* 仅支持HTTP、HTTPS
+* 会有转发
+* 上传仅支持从文件上传（app退出时，从data或者stream的上传会失败）
+* 如果后台转发是app在后台时启动的，configuration对象的discretionary属性视为YES
+
 #### Life Cycle and Delegate Interaction
 
 #### NSCopying Behavior
