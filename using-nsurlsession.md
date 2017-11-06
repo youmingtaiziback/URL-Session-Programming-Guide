@@ -32,6 +32,8 @@ iOS中，如果后台传输完成或者需要证书，而此时app没有运行�
 
 > 多个identifier时，必须为每一个identifier创建一个session
 
+app挂起时，如果有任务完成，代理的URLSession:downloadTask:didFinishDownloadingToURL:会被调用，task和下载的file的URL会传进来
+
 #### Life Cycle and Delegate Interaction
 
 #### NSCopying Behavior
