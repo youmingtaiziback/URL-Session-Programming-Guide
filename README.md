@@ -25,6 +25,11 @@ Fetching Content as Data \(In Memory\)
 * 对于简单请求，直接用NSURLSession的api请求，返回NSData或者磁盘文件
 * 对于复杂请求，比如上传数据，为NSURLSession提供一个NSURLRequest
 
+无论采取哪种方式，都可以通过两种方式获得返回数据
+
+* completion block
+* delegate
+
 #### Helper Classes
 
 #### Redirection and Other Request Changes
