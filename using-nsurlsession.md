@@ -92,6 +92,12 @@ NSLog(@"DATA:\n%@\nEND DATA\n", [[NSString alloc] initWithData:data encoding:NSU
 
 ## Fetching Data Using a Custom Delegate
 
+```
+NSURL *url = [NSURL URLWithString: @"https://www.example.com/"];
+NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
+[dataTask resume];
+```
+
 ## Downloading Files
 
 ## Uploading Body Content
