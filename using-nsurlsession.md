@@ -69,6 +69,13 @@ NSURLSession API提供了一系列配置选项
 * cookie机制的控制
 * HTTP管道的控制
 
+实例化session需要：
+
+* 一个configuration对象管理session和它内部的task的行为
+* 可选的，代理对象处理接受的数据并处理session的事件
+
+> 如果要后台传输，必须提供自定义代理
+
 ## Fetching Resources Using System-Provided Delegates
 
 ## Fetching Data Using a Custom Delegate
