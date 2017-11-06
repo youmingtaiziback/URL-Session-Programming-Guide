@@ -57,6 +57,18 @@ Life Cycle of a URL Session
 
 ## Creating and Configuring a Session
 
+NSURLSession API提供了一系列配置选项
+
+* 针对个别session的cache、cookie、证书、协议提供私有存储
+* 针对task或者session的认证绑定
+* 支持文件的上传下载，鼓励数据和元数据分离
+* 限制每一个host的最大连接数
+* 针对每一个资源设置timeout
+* TLS最高、最低版本的支持
+* 自定义代理字典
+* cookie机制的控制
+* HTTP管道的控制
+
 ## Fetching Resources Using System-Provided Delegates
 
 ## Fetching Data Using a Custom Delegate
