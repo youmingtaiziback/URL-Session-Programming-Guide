@@ -34,6 +34,11 @@ Fetching Content as Data \(In Memory\)
 
 #### Helper Classes
 
+下载类通过两类辅助类提供元数据：
+
+* NSURLRequest：使用NSMutableURLRequest下载时，系统会对request进行深拷贝
+* NSURLResponse
+
 #### Redirection and Other Request Changes
 
 #### Authentication and Credentials
