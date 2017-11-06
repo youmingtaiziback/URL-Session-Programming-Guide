@@ -20,6 +20,11 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 #### URL Loading
 
+Fetching Content as Data \(In Memory\)
+
+* 对于简单请求，直接用NSURLSession的api请求，返回NSData或者磁盘文件
+* 对于复杂请求，比如上传数据，为NSURLSession提供一个NSURLRequest
+
 #### Helper Classes
 
 #### Redirection and Other Request Changes
