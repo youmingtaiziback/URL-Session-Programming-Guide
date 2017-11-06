@@ -44,6 +44,9 @@ Life Cycle of a URL Session
 
 #### NSCopying Behavior
 
+* 对session或者task拷贝会返回同一对象
+* 对configuration对象拷贝会返回新的对象
+
 ## Sample Delegate Class Interface
 
 ## Creating and Configuring a Session
