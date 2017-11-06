@@ -76,7 +76,7 @@ NSURLSession API提供了一系列配置选项
 
 > 如果要后台传输，必须提供自定义代理
 
-除了background configuration，其他两种configuration可以重复使用
+除了background configuration，其他两种configuration可以重复使用，因为session对configuration是深拷贝
 
 ## Fetching Resources Using System-Provided Delegates
 
