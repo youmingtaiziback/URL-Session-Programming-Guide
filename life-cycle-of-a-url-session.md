@@ -19,10 +19,13 @@
 * 创建任务
   * 任务开始时处于挂起状态，调用resume后启动
   * > 如果创建`NSURLSession`时没有提供`delegate`，任务就必须有`completionHandler`参数，否则拿不到收据
+* 断点续传
+  * `cancelByProducingResumeData:`
+  * `downloadTaskWithResumeData:` /`downloadTaskWithResumeData:completionHandler:`
 
 ## Life Cycle of a URL Session with Custom Delegates
 
-##  
+## 
 
 
 
