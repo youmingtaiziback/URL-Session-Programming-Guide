@@ -100,6 +100,14 @@ NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
 
 ## Downloading Files
 
+下载文件时需要实现的代理方法
+
+* `URLSession:downloadTask:didFinishDownloadingToURL: `提供临时文件的路径
+* > 此方法结束后，临时文件会被删除
+* `URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:`下载的进度
+* `URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:` 断点续传
+* `URLSession:task:didCompleteWithError:` 下载失败
+
 ## Uploading Body Content
 
 ## Handling Authentication and Custom TLS Chain Validation
