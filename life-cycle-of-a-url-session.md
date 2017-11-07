@@ -23,7 +23,7 @@
   * `cancelByProducingResumeData:`
   * `downloadTaskWithResumeData:` /`downloadTaskWithResumeData:completionHandler:`
 * 下载结束后，NSURLSession调用completion handler
-  * > NSURLSession的error参数中不会描述服务器端的错误，只描述客户端的错误。错误码定义在URL Loading System Error Codes
+  * > NSURLSession的error参数中不会描述服务器端的错误，只描述客户端的错误。错误码定义在URL Loading System Error Codes。服务端的错误定义在NSHTTPURLResponse的HTTP状态码中
 
 ## Life Cycle of a URL Session with Custom Delegates
 
