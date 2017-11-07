@@ -172,19 +172,21 @@ app需要提供所有头部信息
 
 ```
 NSURL *textFileURL = [NSURL fileURLWithPath:@"/path/to/file.txt"];
- 
+
 NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
 NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
 mutableRequest.HTTPMethod = @"POST";
 mutableRequest.HTTPBodyStream = [NSInputStream inputStreamWithFileAtPath:textFileURL.path];
 [mutableRequest setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
 [mutableRequest setValue:[NSString stringWithFormat:@"%lld", data.length] forHTTPHeaderField:@"Content-Length"];
- 
+
 NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithStreamedRequest:mutableRequest];
 [uploadTask resume];
 ```
 
 #### Uploading a File Using a Download Task
+
+为了实现下载任务的上传，需要提供NSData或者流给下载任务的request
 
 ## Handling Authentication and Custom TLS Chain Validation
 
