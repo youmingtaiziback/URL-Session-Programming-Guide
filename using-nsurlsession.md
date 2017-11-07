@@ -168,6 +168,8 @@ NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutab
 
 app需要提供所有头部信息
 
+传输失败时调用URLSession:task:needNewBodyStream: ，并创建一个新的流，在新的流上调用completion handler
+
 #### Uploading a File Using a Download Task
 
 ## Handling Authentication and Custom TLS Chain Validation
