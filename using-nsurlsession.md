@@ -123,7 +123,9 @@ NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
 * 文件：文件在磁盘
 * 流：数据来自网络
 
-无论哪种方式，如果提供了自定义代理，它的`URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend: `将会被调用来通知上传进度
+无论哪种方式，如果提供了自定义代理，它的`URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:`将会被调用来通知上传进度
+
+如果上传的是流，必须为session提供一个实现了`URLSession:task:needNewBodyStream:`的代理
 
 #### Uploading Body Content Using an NSData Object
 
