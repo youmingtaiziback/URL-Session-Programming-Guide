@@ -133,6 +133,20 @@ NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
 
 对于请求的头部信息，session对象自动计算`Content-Length`，其他的字段根据需要提供
 
+```
+NSURL *textFileURL = [NSURL fileURLWithPath:@"/path/to/file.txt"];
+NSData *data = [NSData dataWithContentsOfURL:textFileURL];
+ 
+NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
+NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
+mutableRequest.HTTPMethod = @"POST";
+[mutableRequest setValue:[NSString stringWithFormat:@"%lld", data.length] forHTTPHeaderField:@"Content-Length"];
+[mutableRequest setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
+ 
+NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutableRequest fromData:data];
+[uploadTask resume];
+```
+
 #### Uploading Body Content Using a File
 
 #### Uploading Body Content Using a Stream
