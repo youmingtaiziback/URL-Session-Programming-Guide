@@ -193,6 +193,7 @@ NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithStreamedReque
 如果服务器端返回状态码需要认证，NSURLSession会调用认证的代理方法
 
 * session-level challenges：如果有session的代理，`URLSession:didReceiveChallenge:completionHandler:` 被调用，否则任务代理的`URLSession:task:didReceiveChallenge:completionHandler:`被调用
+* non-session-level challenges：任务代理的`URLSession:task:didReceiveChallenge:completionHandler:`被调用，session代理的`URLSession:didReceiveChallenge:completionHandler:` 不会被调用
 
 ## Handling iOS Background Activity
 
