@@ -102,13 +102,34 @@ NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
 
 下载文件时需要实现的代理方法
 
-* `URLSession:downloadTask:didFinishDownloadingToURL: `提供临时文件的路径
+* `URLSession:downloadTask:didFinishDownloadingToURL:`提供临时文件的路径
 * > 此方法结束后，临时文件会被删除
 * `URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:`下载的进度
 * `URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:` 断点续传
 * `URLSession:task:didCompleteWithError:` 下载失败
 
+下载中途暂停再开始的步骤
+
+* `cancelByProducingResumeData:`
+* `downloadTaskWithResumeData:`/`downloadTaskWithResumeData:completionHandler:`
+
+在失败的回调`URLSession:task:didCompleteWithError:` 中，对于可重新开始的任务，error对象中获取`userInfo`，它里面包含了已下载的数据，然后调用`downloadTaskWithResumeData:`/`downloadTaskWithResumeData:completionHandler:`
+
 ## Uploading Body Content
+
+对于HTTP POST请求，可以以三种方式向body里面提供数据
+
+* NSData：数据在内存
+* 文件：文件在磁盘
+* 流：数据来自网络
+
+#### Uploading Body Content Using an NSData Object
+
+#### Uploading Body Content Using a File
+
+#### Uploading Body Content Using a Stream
+
+#### Uploading a File Using a Download Task
 
 ## Handling Authentication and Custom TLS Chain Validation
 
