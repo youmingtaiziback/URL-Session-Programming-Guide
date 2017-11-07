@@ -28,6 +28,15 @@
 
 ## Life Cycle of a URL Session with Custom Delegates
 
+在需要后台上传下载、需要以非默认的形式处理认证和缓存时，必须提供自定义代理，代理的作用有：
+
+* 下载时提供下载数据的URL
+* 处理认证上传流
+* 是否支持HTTP转发
+* NSURLSession通过代理通知每一次的传输状态
+
+* 通知app传输完成
+
 ## 
 
 
