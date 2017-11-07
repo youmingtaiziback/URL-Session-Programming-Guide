@@ -153,16 +153,20 @@ NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutab
 
 ```
 NSURL *textFileURL = [NSURL fileURLWithPath:@"/path/to/file.txt"];
- 
+
 NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
 NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
 mutableRequest.HTTPMethod = @"POST";
- 
+
 NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutableRequest fromFile:textFileURL];
 [uploadTask resume];
 ```
 
 #### Uploading Body Content Using a Stream
+
+上传流`uploadTaskWithStreamedRequest:`
+
+app需要提供所有头部信息
 
 #### Uploading a File Using a Download Task
 
