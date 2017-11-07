@@ -197,5 +197,7 @@ NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithStreamedReque
 
 ## Handling iOS Background Activity
 
+后台下载任务结束后，app被自动重启。app代理的`application:handleEventsForBackgroundURLSession:completionHandler:`负责重新创建session、保存completion handler，并在session代理的`URLSessionDidFinishEventsForBackgroundURLSession:`调用后调用completion handler
+
 
 
