@@ -170,6 +170,20 @@ app需要提供所有头部信息
 
 传输失败时调用`URLSession:task:needNewBodyStream:` ，并创建一个新的流，在新的流上调用completion handler
 
+```
+NSURL *textFileURL = [NSURL fileURLWithPath:@"/path/to/file.txt"];
+ 
+NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
+NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
+mutableRequest.HTTPMethod = @"POST";
+mutableRequest.HTTPBodyStream = [NSInputStream inputStreamWithFileAtPath:textFileURL.path];
+[mutableRequest setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
+[mutableRequest setValue:[NSString stringWithFormat:@"%lld", data.length] forHTTPHeaderField:@"Content-Length"];
+ 
+NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithStreamedRequest:mutableRequest];
+[uploadTask resume];
+```
+
 #### Uploading a File Using a Download Task
 
 ## Handling Authentication and Custom TLS Chain Validation
