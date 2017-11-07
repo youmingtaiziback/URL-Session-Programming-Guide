@@ -129,6 +129,10 @@ NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
 
 #### Uploading Body Content Using an NSData Object
 
+上传NSData需要调用`uploadTaskWithRequest:fromData:`或者`uploadTaskWithRequest:fromData:completionHandler:`
+
+对于请求的头部信息，session对象自动计算`Content-Length`，其他的字段根据需要提供
+
 #### Uploading Body Content Using a File
 
 #### Uploading Body Content Using a Stream
