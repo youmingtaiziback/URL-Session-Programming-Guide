@@ -199,5 +199,42 @@ NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithStreamedReque
 
 后台下载任务结束后，app被自动重启。app代理的`application:handleEventsForBackgroundURLSession:completionHandler:`负责重新创建session、保存completion handler，并在session代理的`URLSessionDidFinishEventsForBackgroundURLSession:`调用后调用completion handler
 
+**Listing 1-11**  Session background download task for iOS example
+
+```
+NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
+ 
+NSURLSessionDownloadTask *backgroundDownloadTask = [backgroundSession downloadTaskWithURL:url];
+[backgroundDownloadTask resume];
+```
+
+**Listing 1-12**  Session delegate methods for iOS background downloads
+
+```
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session {
+    AppDelegate *appDelegate = (AppDelegate *)[[[UIApplication sharedApplication] delegate];
+    if (appDelegate.backgroundSessionCompletionHandler) {
+        CompletionHandler completionHandler = appDelegate.backgroundSessionCompletionHandler;
+        appDelegate.backgroundSessionCompletionHandler = nil;
+        completionHandler();
+    }
+ 
+    NSLog(@"All tasks are finished");
+}
+```
+
+**Listing 1-13**  App delegate methods for iOS background downloads
+
+```
+@implementation AppDelegate
+ 
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
+    self.backgroundSessionCompletionHandler = completionHandler;
+}
+ 
+@end
+
+```
+
 
 
