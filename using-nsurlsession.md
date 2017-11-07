@@ -136,18 +136,20 @@ NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithURL:url];
 ```
 NSURL *textFileURL = [NSURL fileURLWithPath:@"/path/to/file.txt"];
 NSData *data = [NSData dataWithContentsOfURL:textFileURL];
- 
+
 NSURL *url = [NSURL URLWithString:@"https://www.example.com/"];
 NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:url];
 mutableRequest.HTTPMethod = @"POST";
 [mutableRequest setValue:[NSString stringWithFormat:@"%lld", data.length] forHTTPHeaderField:@"Content-Length"];
 [mutableRequest setValue:@"text/plain" forHTTPHeaderField:@"Content-Type"];
- 
+
 NSURLSessionUploadTask *uploadTask = [defaultSession uploadTaskWithRequest:mutableRequest fromData:data];
 [uploadTask resume];
 ```
 
 #### Uploading Body Content Using a File
+
+上传文件，需要调用`uploadTaskWithRequest:fromFile:`或者`uploadTaskWithRequest:fromFile:completionHandler:`
 
 #### Uploading Body Content Using a Stream
 
