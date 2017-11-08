@@ -49,6 +49,8 @@ Fetching Content as Data \(In Memory\)
 
 #### Cookie Storage
 
+由于HTTP协议的无状态特性，URL loading system提供了创建cookie、管理cookie、通过request发送cookie、通过response接收cookie的接口
+
 #### Protocol Support
 
 URL loading system默认支持http、https、file、ftp、data等协议，也支持应用级别的自定义协议。还可以给request和response添加协议相关的属性
