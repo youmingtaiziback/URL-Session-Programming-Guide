@@ -37,6 +37,11 @@
 
 * 通知app传输完成
 
+自定义代理时，方法的调用顺序
+
+* 创建configuration
+* 创建session，指定configuration和delegate
+* 
 ## 
 
 
