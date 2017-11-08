@@ -45,6 +45,7 @@
 * 如果需要授权
   * For session-level challenges：如果实现了URLSession:didReceiveChallenge:completionHandler:则调用，否则调用task的URLSession:task:didReceiveChallenge:completionHandler: 
   * For non-session-level challenges：URLSession:task:didReceiveChallenge:completionHandler:被调用
+* 收到HTTP转发时，URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler: 被调用
 
 
 
