@@ -57,6 +57,9 @@ Fetching Content as Data \(In Memory\)
 * [Life Cycle of a URL Session](/life-cycle-of-a-url-session.md)：详细介绍session如何与代理交互
 * Encoding URL Data：如果把任意字符串转化为URL可安全使用的
 * Handling Redirects and Other Request Changes：响应URL request改变的方法
+* Authentication Challenges and TLS Chain Validation：与服务器认证的过程
+* Understanding Cache Access：在请求过程中如何使用cache
+* Cookies and Custom Protocols：cookie存储和应用级自定义协议的支持
 
 1
 
