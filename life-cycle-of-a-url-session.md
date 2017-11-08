@@ -47,6 +47,7 @@
   * For non-session-level challenges：URLSession:task:didReceiveChallenge:completionHandler:被调用
 * 收到HTTP转发时，URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler: 被调用
 * 对于（重）下载任务，调用downloadTaskWithResumeData: 或者downloadTaskWithResumeData:completionHandler:。session代理的URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:被调用
+* 对于data task，session调用代理的URLSession:dataTask:didReceiveResponse:completionHandler: 方法。如果app把data task转为下载任务，session调用代理的URLSession:dataTask:didBecomeDownloadTask: ，参数是新的下载任务。之后代理不再接收data task的回调二是接收下载任务的回调
 
 
 
