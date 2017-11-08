@@ -49,6 +49,8 @@ Fetching Content as Data \(In Memory\)
 
 URL loading system提供了内存、磁盘缓存，缓存时基于单个app的。session根据NSURLRequest和NSURLSessionConfiguration的缓存策略访问缓存
 
+NSURLCache提供配置缓存大小、缓存在磁盘上的位置的接口。也提供了管理缓存response的接口
+
 #### Cookie Storage
 
 由于HTTP协议的无状态特性，URL loading system提供了创建cookie、管理cookie、通过request发送cookie、通过response接收cookie的接口。iOS的cookie存储是基于单个app的
