@@ -46,6 +46,7 @@
   * For session-level challenges：如果实现了URLSession:didReceiveChallenge:completionHandler:则调用，否则调用task的URLSession:task:didReceiveChallenge:completionHandler: 
   * For non-session-level challenges：URLSession:task:didReceiveChallenge:completionHandler:被调用
 * 收到HTTP转发时，URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler: 被调用
+* 对于（重）下载任务，调用downloadTaskWithResumeData: 或者downloadTaskWithResumeData:completionHandler:。session代理的URLSession:downloadTask:didResumeAtOffset:expectedTotalBytes:被调用
 
 
 
