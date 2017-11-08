@@ -51,6 +51,8 @@ Fetching Content as Data \(In Memory\)
 
 #### Protocol Support
 
+URL loading system默认支持http、https、file、ftp、data等协议，也支持应用级别的自定义协议。还可以给request和response添加协议相关的属性
+
 ## How to Use This Document
 
 * [Using NSURLSession](/using-nsurlsession.md)：概括URL Loading System
