@@ -52,6 +52,7 @@
 * 上传过程中，URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:被阶段性的调用
 * 传输过程中会通知进度，下载任务：URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite: ，data task：URLSession:dataTask:didReceiveData:
 * 对于data task，调用代理的URLSession:dataTask:willCacheResponse:completionHandler: ，app决定是否允许缓存，如果不实现该方法，session的configuration的默认缓存方案被采用
+* 下载任务结束后，URLSession:downloadTask:didFinishDownloadingToURL: 被调用，传进来临时文件的位置
 
 
 
