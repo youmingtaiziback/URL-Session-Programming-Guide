@@ -41,8 +41,10 @@
 
 * 创建configuration
 * 创建session，指定configuration和delegate
-* 
-## 
+* 在session内部创建task
+* 如果需要授权
+  * For session-level challenges：如果实现了URLSession:didReceiveChallenge:completionHandler:则调用，否则调用task的URLSession:task:didReceiveChallenge:completionHandler: 
+  * For non-session-level challenges：URLSession:task:didReceiveChallenge:completionHandler:被调用
 
 
 
