@@ -53,7 +53,8 @@
 * 传输过程中会通知进度，下载任务：URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite: ，data task：URLSession:dataTask:didReceiveData:
 * 对于data task，调用代理的URLSession:dataTask:willCacheResponse:completionHandler: ，app决定是否允许缓存，如果不实现该方法，session的configuration的默认缓存方案被采用
 * 下载任务结束后，URLSession:downloadTask:didFinishDownloadingToURL: 被调用，传进来临时文件的位置
-* 任何任务结束后，session会调用代理的URLSession:task:didCompleteWithError:。如果下载任务可重启，error对象的userInfo包含了NSURLSessionDownloadTaskResumeData key，app用它调用downloadTaskWithResumeData: 或者downloadTaskWithResumeData:completionHandler: 。
+* 任何任务结束后，session会调用代理的URLSession:task:didCompleteWithError:。如果下载任务可重启，error对象的userInfo包含了NSURLSessionDownloadTaskResumeData key，app用它调用downloadTaskWithResumeData: 或者downloadTaskWithResumeData:completionHandler: 。如果任务不能重启，app应该重新创建一个下载任务
+* 如果response是multipart编码的，代理的didReceiveResponse会被调用多次
 
 
 
