@@ -51,6 +51,7 @@
 * 如果调用uploadTaskWithStreamedRequest:，则代理的URLSession:task:needNewBodyStream:被调用
 * 上传过程中，URLSession:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:被阶段性的调用
 * 传输过程中会通知进度，下载任务：URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite: ，data task：URLSession:dataTask:didReceiveData:
+* 对于data task，调用代理的URLSession:dataTask:willCacheResponse:completionHandler: ，app决定是否允许缓存，如果不实现该方法，session的configuration的默认缓存方案被采用
 
 
 
