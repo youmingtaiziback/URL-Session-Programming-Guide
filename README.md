@@ -68,10 +68,10 @@ URL loading system默认支持http、https、file、ftp、data等协议，也支
 * [Using NSURLSession](/using-nsurlsession.md)：概括URL Loading System
 * [Life Cycle of a URL Session](/life-cycle-of-a-url-session.md)：详细介绍session如何与代理交互
 * [Encoding URL Data](/encoding-and-decoding-url-data.md)：如果把任意字符串转化为URL可安全使用的
-* Handling Redirects and Other Request Changes：响应URL request改变的方法
-* Authentication Challenges and TLS Chain Validation：与服务器认证的过程
-* Understanding Cache Access：在请求过程中如何使用cache
-* Cookies and Custom Protocols：cookie存储和应用级自定义协议的支持
+* [Handling Redirects and Other Request Changes](/handling-redirects-and-other-request-changes.md)：响应URL request改变的方法
+* [Authentication Challenges and TLS Chain Validation](/authentication-challenges-and-tls-chain-validation.md)：与服务器认证的过程
+* [Understanding Cache Access](/understanding-cache-access.md)：在请求过程中如何使用cache
+* [Cookies and Custom Protocols](/cookies-and-custom-protocols.md)：cookie存储和应用级自定义协议的支持
 
 
 
