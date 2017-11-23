@@ -53,6 +53,8 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 #### Redirection and Other Request Changes
 
+有些协议，比如HTTP会让服务器告诉客户端数据已经移动到不同的URL了。app端会收到回调并且做出响应
+
 #### Authentication and Credentials
 
 #### Cache Management
