@@ -47,12 +47,9 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 **Response Metadata**
 
+从服务器返回的响应可分为两部分：元数据和内容。元数据包括MIME类型、数据长度、编码、URL
 
-
-* NSURLRequest：使用NSMutableURLRequest下载时，系统会对request进行深拷贝
-* NSURLResponse：包括
-  * 元数据：MIME类型、数据长度、编码、URL
-  * 数据本身
+> NSURLResponse对象只包含元数据，数据本身会通过block或者代理返回。NSCachedURLResponse对象封装了NSURLResponse、URL数据和app提供的其他信息
 
 #### Redirection and Other Request Changes
 
