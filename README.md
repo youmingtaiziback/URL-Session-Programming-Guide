@@ -39,6 +39,14 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 #### Helper Classes
 
+**URL Requests**
+
+> 当app从NSMutableURLRequest发起一个连接或者下载时，对NSMutableURLRequest会进行深拷贝
+
+**Response Metadata**
+
+
+
 下载类通过两类辅助类提供元数据：
 
 * NSURLRequest：使用NSMutableURLRequest下载时，系统会对request进行深拷贝
