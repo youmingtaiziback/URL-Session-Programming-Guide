@@ -69,7 +69,7 @@ NSURLAuthenticationChallenge的实例会被NSURLProtocol的子类用来通知URL
 
 #### Cache Management
 
-URL loading system提供了内存、磁盘缓存，缓存时基于单个app的。session根据NSURLRequest和NSURLSessionConfiguration的缓存策略访问缓存
+URL loading system提供了内存、磁盘缓存，缓存是基于单个app的。session根据NSURLRequest和NSURLSessionConfiguration的缓存策略访问缓存
 
 NSURLCache提供配置缓存大小、缓存在磁盘上的位置的接口。也提供了管理缓存response的接口
 
