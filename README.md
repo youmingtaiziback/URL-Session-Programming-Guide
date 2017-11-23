@@ -55,6 +55,10 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 有些协议，比如HTTP会让服务器告诉客户端数据已经移动到不同的URL了。app端会收到回调并且做出响应
 
+#### Authentication and Credentials
+
+服务器可以保护特定的数据，让客户端通过证书或者用户名密码访问
+
 URL loading system提供了类用来持久化存储证书，可以为单个request、app运行期间、永久存储在key chain中
 
 [NSURLCredentialStorage](https://developer.apple.com/documentation/foundation/nsurlcredentialstorage)为session管理证书存储，并提供[NSURLCredential](https://developer.apple.com/documentation/foundation/urlcredential)到[NSURLProtectionSpace](https://developer.apple.com/documentation/foundation/nsurlprotectionspace)的映射。只有当鉴权查询成功证书才会被存储
@@ -62,10 +66,6 @@ URL loading system提供了类用来持久化存储证书，可以为单个reque
 [NSURLAuthenticationChallenge](https://developer.apple.com/documentation/foundation/urlauthenticationchallenge)封装了[NSURLProtocol](https://developer.apple.com/documentation/foundation/nsurlprotocol)的实现对请求进行认证所需的信息：证书、protection space、error或者response、已经尝试过的认证次数
 
 NSURLAuthenticationChallenge的实例会被NSURLProtocol的子类用来通知URL loading system需要进行认证，也会被传递给[NSURLSession](https://developer.apple.com/documentation/foundation/nsurlsession)的代理方法
-
-#### Authentication and Credentials
-
-服务器可以保护特定的数据，让客户端通过证书或者用户名密码访问
 
 #### Cache Management
 
