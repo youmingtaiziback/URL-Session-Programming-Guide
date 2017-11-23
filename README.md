@@ -55,7 +55,11 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 有些协议，比如HTTP会让服务器告诉客户端数据已经移动到不同的URL了。app端会收到回调并且做出响应
 
+URL loading system提供了类用来持久化存储证书，可以为单个request、app运行期间、永久存储在key chain中
+
 #### Authentication and Credentials
+
+服务器可以保护特定的数据，让客户端通过证书或者用户名密码访问
 
 #### Cache Management
 
