@@ -1,6 +1,6 @@
 # About the URL Loading System
 
-URL loading system的功能包括：下载、上传、管理cookie、控制response caching、处理证书存储、认证、自定义协议扩展
+URL loading system的功能包括：下载、上传、管理cookie存储、控制response caching、处理证书存储、认证、自定义协议扩展
 
 URL loading system支持的协议：
 
@@ -22,7 +22,7 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 Fetching Content as Data \(In Memory\)
 
-* 对于简单请求，直接用NSURLSession的api请求，返回NSData或者磁盘文件
+* 对于简单请求，用NSURLSession的api直接请求URL，返回NSData或者磁盘文件
 * 对于复杂请求，比如上传数据，为NSURLSession提供一个NSURLRequest
 
 无论采取哪种方式，都可以通过两种方式获得返回数据
