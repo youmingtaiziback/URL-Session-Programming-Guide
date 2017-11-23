@@ -57,7 +57,7 @@ URL loading system的辅助类可以分为五种：协议支持、认证和证�
 
 URL loading system提供了类用来持久化存储证书，可以为单个request、app运行期间、永久存储在key chain中
 
-[NSURLCredentialStorage](https://developer.apple.com/documentation/foundation/nsurlcredentialstorage)为session管理证书存储，并提供[NSURLCredential](https://developer.apple.com/documentation/foundation/urlcredential)到[NSURLProtectionSpace](https://developer.apple.com/documentation/foundation/nsurlprotectionspace)的映射
+[NSURLCredentialStorage](https://developer.apple.com/documentation/foundation/nsurlcredentialstorage)为session管理证书存储，并提供[NSURLCredential](https://developer.apple.com/documentation/foundation/urlcredential)到[NSURLProtectionSpace](https://developer.apple.com/documentation/foundation/nsurlprotectionspace)的映射。只有当鉴权查询成功证书才会被存储
 
 #### Authentication and Credentials
 
