@@ -59,6 +59,8 @@ URL loading system提供了类用来持久化存储证书，可以为单个reque
 
 [NSURLCredentialStorage](https://developer.apple.com/documentation/foundation/nsurlcredentialstorage)为session管理证书存储，并提供[NSURLCredential](https://developer.apple.com/documentation/foundation/urlcredential)到[NSURLProtectionSpace](https://developer.apple.com/documentation/foundation/nsurlprotectionspace)的映射。只有当鉴权查询成功证书才会被存储
 
+[NSURLAuthenticationChallenge](https://developer.apple.com/documentation/foundation/urlauthenticationchallenge)封装了
+
 #### Authentication and Credentials
 
 服务器可以保护特定的数据，让客户端通过证书或者用户名密码访问
